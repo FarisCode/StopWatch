@@ -15,12 +15,14 @@ function reset() {
     unset("two");
     unset("three");
     unset("four");
+    document.getElementById("start").innerText = "Start";        
 }
 function start() {
     if (flag === 0) {
         flag = 1;
         inter = window.setInterval(timer, 1000);
         document.getElementById("one").style.animationName = "timer";
+        document.getElementById("start").innerText = "Stop";        
     } else {
         unset("one");
         unset("two");
@@ -28,10 +30,10 @@ function start() {
         unset("four");
         flag = 0;
         window.clearInterval(inter);
+        document.getElementById("start").innerText = "Start";        
     }
 
 }
-
 function timer() {
     l++;
     var ele;
