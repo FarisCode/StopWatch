@@ -5,11 +5,31 @@
 .content{
     margin: 20px auto;
     display:block;
-    width:300px;
+    width:500px;
     text-align:center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-sizing: border-box;
     padding: 10px;
+    position: relative;
+}
+.clock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+}
+.content .colon2{
+    font-size: 65px;
+    position: absolute;
+    right: 33%;
+    top: 25px;
+}
+.content .colon1{
+    font-size: 65px;
+    position: absolute;
+    left: 36%;
+    top: 25px;
 }
 .content .btn{
     display: block;

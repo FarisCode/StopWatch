@@ -12,28 +12,48 @@
 
 <body>
     <div class="content">
-        <div class="container">
-            <div class="move anim" id="four">
-                <div class="num" id="ths">0</div>
+        <div class="clock">
+            <div class="hour">
+                <div class="container">
+                    <div class="move anim" id="six">
+                        <div class="num" id="mill">0</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="move anim" id="five">
+                        <div class="num" id="lac">0</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="move anim" id="three">
-                <div class="num" id="huns">0</div>
+            <span class="colon1">:</span>
+            <div class="min">
+                <div class="container">
+                    <div class="move anim" id="four">
+                        <div class="num" id="ths">0</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="move anim" id="three">
+                        <div class="num" id="huns">0</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="move anim" id="two">
-                <div class="num" id="tens">0</div>
-            </div>
-        </div>
-        <div class="container" id="wid">
-            <div class="move one" id="one">
-                <div class="num" id="ones">0</div>
+            <span class="colon2">:</span>
+            <div class="sec">
+                <div class="container">
+                    <div class="move anim" id="two">
+                        <div class="num" id="tens">0</div>
+                    </div>
+                </div>
+                <div class="container" id="wid">
+                    <div class="move one" id="one">
+                        <div class="num" id="ones">0</div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="btn">
-            <button class="f-btn"id="start" onclick="start()">Start</button>
+            <button class="f-btn" id="start" onclick="start()">Start</button>
             <button class="f-btn" onclick="reset()">Reset</button>
         </div>
     </div>

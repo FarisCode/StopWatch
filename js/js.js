@@ -1,12 +1,15 @@
-var m = "0000";
-var i = m[0], j = m[1], k = m[2], l = m[3];
+var m = "995955";
+var g = m[0], h = m[1], i = m[2], j = m[3], k = m[4], l = m[5];
 var flag = 0;
 var inter;
+
 function reset() {
-    i = m[0];
-    j = m[1];
-    k = m[2];
-    l = m[3];
+    g = m[0];
+    h = m[1];
+    i = m[2];
+    j = m[3];
+    k = m[4];
+    l = m[5];
     inter;
     post();
     flag = 0;
@@ -15,14 +18,14 @@ function reset() {
     unset("two");
     unset("three");
     unset("four");
-    document.getElementById("start").innerText = "Start";        
+    document.getElementById("start").innerText = "Start";
 }
 function start() {
     if (flag === 0) {
         flag = 1;
         inter = window.setInterval(timer, 1000);
         document.getElementById("one").style.animationName = "timer";
-        document.getElementById("start").innerText = "Stop";        
+        document.getElementById("start").innerText = "Stop";
     } else {
         unset("one");
         unset("two");
@@ -30,7 +33,7 @@ function start() {
         unset("four");
         flag = 0;
         window.clearInterval(inter);
-        document.getElementById("start").innerText = "Start";        
+        document.getElementById("start").innerText = "Start";
     }
 
 }
@@ -48,7 +51,7 @@ function timer() {
         ele = document.getElementById("two");
         ele.style.animationName = "timer";
     }
-    if (k === 10) {
+    if (k === 6) {
         j++;
         k = 0;
         ele = document.getElementById("three");
@@ -60,7 +63,17 @@ function timer() {
         ele = document.getElementById("four");
         ele.style.animationName = "timer";
     }
-    if (i === 10) {
+    if (i === 6) {
+        h++;
+        i = 0;
+    }
+    if (h === 10) {
+        g++;
+        h = 0;
+    }
+    if (g === 10) {
+        g = 0;
+        h = 0;
         i = 0;
         j = 0;
         k = 0;
@@ -69,6 +82,8 @@ function timer() {
     post();
 }
 function post() {
+    document.getElementById("mill").innerHTML = g;
+    document.getElementById("lac").innerHTML = h;
     document.getElementById("ths").innerHTML = i;
     document.getElementById("huns").innerHTML = j;
     document.getElementById("tens").innerHTML = k;
