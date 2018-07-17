@@ -1,0 +1,45 @@
+.content{
+    margin: 20px auto;
+    display:block;
+    width:500px;
+text-align:center;
+}
+.container {
+    perspective: 1000px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.container,.num{
+    width: 30px;
+    height: 50px;
+    border-radius: inherit;
+}
+.num {
+    width: 100%;
+    height: 50px;
+}
+.move {
+    border-radius: 3px;
+    text-align: center;
+    font-size: 80px;
+    transform-style: preserve-3d;
+}
+.anim{
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.one{
+    animation-name: timer;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+@keyframes timer {
+    0% {
+        transform: rotateY(90deg);
+    }
+}
