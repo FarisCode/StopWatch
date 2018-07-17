@@ -1,81 +1,120 @@
-*{
+* {
     font-family: 'PT Serif', serif;
-
 }
-.content{
+
+.content {
     margin: 20px auto;
-    display:block;
-    width:500px;
-    text-align:center;
+    display: block;
+    width: 450px;
+    text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-sizing: border-box;
     padding: 10px;
     position: relative;
 }
-.clock{
+
+.clock {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 75%;
+    width: 85%;
     margin: auto;
 }
-.content .colon2{
+
+span.hr,
+span.min,
+span.s {
+    position: absolute;
+    color: #bbb;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+span.hr {
+    top: 45%;
+    left: 30%;
+}
+
+span.min {
+    top: 45%;
+    left: 60%;
+}
+
+span.s {
+    top: 45%;
+    right: 8%;
+}
+
+.content .colon2 {
     font-size: 65px;
     position: absolute;
-    right: 33%;
+    right: 32%;
     top: 25px;
 }
-.content .colon1{
+
+.content .colon1 {
     font-size: 65px;
     position: absolute;
-    left: 36%;
+    left: 34%;
     top: 25px;
 }
-.content .btn{
+
+.content .btn {
     display: block;
     margin: auto;
     margin-top: 50px;
     padding: 10px;
 }
+
 .container {
     perspective: 1000px;
     margin: 10px;
     display: inline-block;
 }
 
-.container,.num{
+.container,
+.num {
     width: 30px;
     height: 50px;
     border-radius: inherit;
-    text-shadow: 1px 1px 4px #0000006b;
+    text-shadow: 1.5px 1.5px 3px #0000006b;
 }
+
 .num {
     width: 100%;
     height: 50px;
 }
+
 .move {
     border-radius: 3px;
     text-align: center;
     font-size: 80px;
     transform-style: preserve-3d;
 }
-.anim{
+
+.anim {
     animation-duration: 0.7s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-.one{
+
+.one {
     /* animation-name: timer; */
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
-    animation-direction: alternate ;
+    animation-direction: alternate;
+}
+
+#start {
+    color: #3b8e52;
 }
 
 .f-btn {
     border: 1px solid #bbb;
     cursor: pointer;
     border-radius: 3px;
-    padding: 8px 14px;
+    padding: 8px 18px;
     margin: 0 5px;
     outline: none;
     text-align: center;
@@ -92,6 +131,7 @@
     opacity: 0.9;
     box-shadow: none;
 }
+
 @keyframes timer {
     0% {
         transform: rotateY(-90deg);

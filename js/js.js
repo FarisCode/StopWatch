@@ -1,4 +1,4 @@
-var m = "995955";
+var m = "000000";
 var g = m[0], h = m[1], i = m[2], j = m[3], k = m[4], l = m[5];
 var flag = 0;
 var inter;
@@ -19,6 +19,7 @@ function reset() {
     unset("three");
     unset("four");
     document.getElementById("start").innerText = "Start";
+    document.getElementById("start").style.color = "#3b8e52";
 }
 function start() {
     if (flag === 0) {
@@ -26,6 +27,7 @@ function start() {
         inter = window.setInterval(timer, 1000);
         document.getElementById("one").style.animationName = "timer";
         document.getElementById("start").innerText = "Stop";
+        document.getElementById("start").style.color="#ff0000";
     } else {
         unset("one");
         unset("two");
@@ -34,6 +36,7 @@ function start() {
         flag = 0;
         window.clearInterval(inter);
         document.getElementById("start").innerText = "Start";
+        document.getElementById("start").style.color = "#3b8e52";
     }
 
 }
